@@ -1,0 +1,25 @@
+    <%= nested_form_for @tenant, :html => {:multipart => true} do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <div class="row">
+        <%= f.label :name, "Name" %>
+        <%= f.text_field :name, class: 'span6' %>
+      </div>
+
+      <div class="row">
+        <%= f.label :subdomain, "Subdomain" %>
+        <%= f.text_field :subdomain, class: 'span6' %>
+      </div>
+
+      <div class="row">
+        <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+
+        <% if @tenant.id.blank? %>
+          <%= link_to "Cancel", tenants_path,  method: :get, class: "btn btn-large" %>
+        <% else %>
+          <%= link_to "Cancel", tenant_path(@tenant),  method: :get, class: "btn btn-large" %>
+        <% end %>
+      </div>
+      
+            
+    <% end %>      

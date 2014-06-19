@@ -1,0 +1,15 @@
+<h1>All Tenants</h1>
+
+<div class="row">
+<%= link_to "Create a Tenant", new_tenant_path, class: "btn btn-large btn-primary" %>
+</div>
+
+<br><br>
+
+<%= will_paginate %>
+
+<ul>
+  <%= render @tenants %>
+</ul>
+
+<%= will_paginate %>

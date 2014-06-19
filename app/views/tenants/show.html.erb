@@ -1,0 +1,11 @@
+    <div class="row">
+	    <div class="form-inline span11">  
+			  <%= content_tag(:div) do content_tag(:b,"Name: ") + @tenant.name end %> 
+			  <%= content_tag(:div) do content_tag(:b,"Subdomain: ") + @tenant.subdomain end %>
+			</div>
+		</div>
+
+		<br><br>
+		<div class="row">
+			<%= link_to "Edit", edit_tenant_path(@tenant.id), class: "btn btn-large btn-primary" %>	
+		</div>

@@ -1,0 +1,11 @@
+<div class="row" id="tenant_<%= tenant.id %>">  
+	<div class="span3"><%= link_to tenant.name, tenant_path(tenant) %></div>
+	<div class="span3">Subdomain: <%= tenant.subdomain %></div>
+
+  &nbsp&nbsp&nbsp&nbsp
+	<%= link_to "View", root_url(:subdomain => tenant.subdomain) %>	 
+
+  &nbsp&nbsp&nbsp&nbsp
+	<%= link_to "Delete", tenant, method: :delete,
+		                data: { confirm: "Are you sure?" }, remote: true %>
+</div>

@@ -1,0 +1,15 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "Karma", root_url(:subdomain => false), id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Home", root_path %></li>          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<%= image_tag("ajax-loader.gif", :class => "loading-indicator", :id => "imgAjaxLoader") %>
