@@ -13,6 +13,7 @@ class TenantsController < ApplicationController
 
   def create
     @tenant = Tenant.new(tenant_params)
+    
     if @tenant.save     
       flash[:success] = "The new tenant has been created."
       
@@ -28,6 +29,7 @@ class TenantsController < ApplicationController
 
   def update
 		@tenant = Tenant.find(params[:id])	
+
     if @tenant.update_attributes(tenant_params)
       flash[:success] = "Profile updated"
       redirect_to @tenant
