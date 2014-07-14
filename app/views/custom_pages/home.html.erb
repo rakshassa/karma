@@ -5,13 +5,19 @@
   </div>
 <% else %>
   <div class="center hero-unit">
-    <h1>Welcome to Karma</h1>
+    <h1>Welcome to my test page</h1>
 
     <h2>
-      This is the home page for Karma      
+      This is the home page for testing a variety of paging methods     
     </h2>
 
-    <%= link_to "Tenants", tenants_path %>
+    <div>
+      <%= link_to "Paging", tenants_path %>
+    </div>
+
+    <div>
+      <%= link_to "Infinite Scrolling", entries_path, data: { type: :html} %>
+    </div>
 
   </div>
 

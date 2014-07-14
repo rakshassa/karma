@@ -1,5 +1,10 @@
 Karma::Application.routes.draw do
 
+	namespace :api, :defaults => {:format => :json} do
+		resources :entries
+	end
+
+  resources :entries
 	resources :tenants
 
 

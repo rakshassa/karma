@@ -1,6 +1,6 @@
 class TenantsController < ApplicationController
   def index
-    @tenants = Tenant.paginate(page: params[:page])
+    @tenants = Tenant.paginate(page: params[:page], :per_page => 10)
   end		
 
   def show

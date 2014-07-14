@@ -11,13 +11,18 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
+
 //= require jquery_ujs
 //= require jquery.ui.accordion
 //= require jquery_nested_form
 //= require bootstrap
 //= require moment
 //= require daterangepicker
+
+//= require angular
+//= require angular-resource
+//= require ng-infinite-scroll.min
 //= require_tree .
-//= require turbolinks
+
+
 
